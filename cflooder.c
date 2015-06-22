@@ -12,8 +12,8 @@
  *
  * Use allowed only for legal purposes.
  *
- * To compile:   cc -o flood_connect -O2 flood_connect.c
- * openssl: cc -o flood_connect -O2 flood_connect.c -DOPENSSL -lssl -lcrypt
+ * To compile:   cc -o cflooder -O2 cflooder.c
+ * openssl: cc -o cflooder -O2 cflooder.c -DOPENSSL -lssl -lcrypt
  *
  */
 
