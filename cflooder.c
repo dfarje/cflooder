@@ -8,7 +8,8 @@
  * this stuff is worth it, you can buy me a beer in return.   
  * ----------------------------------------------------------------------------
  *
- * Connection flooder, can also send data, keep connections open etc.
+ * Connection flooder, can also send data, keep connections open.  Beware that
+ * connections are done through the OS.  OS memory limitations apply.
  *
  * Use allowed only for legal purposes.
  *
