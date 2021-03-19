@@ -1,11 +1,11 @@
 /*
  * Flood Connecter v1.2 (c) 2015 by Dfarje / Dfarje <rockwilder101@gmail.com>
- * 
+ *
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
  * <rockwilder101@gmail.com> wrote this file.  As long as you retain this notice you
  * can do whatever you want with this stuff. If we meet some day, and you think
- * this stuff is worth it, you can buy me a beer in return.   
+ * this stuff is worth it, you can buy me a beer in return.
  * ----------------------------------------------------------------------------
  *
  * Connection flooder, can also send data, keep connections open.  Beware that
@@ -15,7 +15,7 @@
  *
  * To compile:   cc -o cflooder -O2 cflooder.c
  * openssl: cc -o cflooder -O2 cflooder.c -DOPENSSL -lssl -lcrypt
- *
+ * will try to make update to use GnuTLS
  */
 
 #include <stdio.h>
@@ -242,7 +242,7 @@ int main(int argc, char *argv[]) {
 
     if (res == 0)
         client = 1;
-        
+
     if (res > 0) {
         signal(SIGTERM, kill_children);
         signal(SIGINT, kill_children);
@@ -381,7 +381,7 @@ int main(int argc, char *argv[]) {
             printf("Press <ENTER> to terminate connections and this program\n");
             (void) getc(stdin);
         }
-    
+
 	if (forks > 0) {
 	    usleep(1 + connect_delay + dump_delay + close_delay);
             while (i < forks) {
@@ -398,4 +398,3 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
-
