@@ -11,6 +11,9 @@
  * Connection flooder, can also send data, keep connections open.  Beware that
  * connections are done through the OS.  OS memory limitations apply.
  *
+ * Will update this program to leverage DPDK KNI to perform packet injection
+ *
+ *
  * Use allowed only for legal purposes.
  *
  * To compile:   cc -o cflooder -O2 cflooder.c
