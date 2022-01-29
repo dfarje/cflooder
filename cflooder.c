@@ -9,8 +9,10 @@
  * ----------------------------------------------------------------------------
  *
  * Connection flooder, can also send data, keep connections open.  Beware that
- * connections are done through the OS.  OS memory limitations apply.
- *
+ * connections are done through the OS using connect() system call.  OS Memory
+ * limitations apply.  A better approach would be to inject packets using the 
+ * DPDK type of interface.
+ * 
  * Will update this program to leverage DPDK KNI to perform packet injection
  *
  *
@@ -119,7 +121,7 @@ int main(int argc, char *argv[]) {
     char    *str = NULL;
     int      str_len = 0;
     int      i;
-    int      s;
+    int      
     int      ret;
     int      err;
     int      client = 0;
