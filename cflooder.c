@@ -25,7 +25,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <netdb.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
 #include <sys/types.h>
@@ -121,7 +120,7 @@ int main(int argc, char *argv[]) {
     char    *str = NULL;
     int      str_len = 0;
     int      i;
-    int      
+    int      s;
     int      ret;
     int      err;
     int      client = 0;
